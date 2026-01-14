@@ -4,7 +4,7 @@
 
 This project implements an **abstractive text summarization system** using the **T5 (Text-to-Text Transfer Transformer)** model.  
 The model is fine-tuned on the **CNN/DailyMail dataset** and evaluated using **ROUGE metrics**.  
-The entire pipeline is optimized to run on limited GPU environments such as **Kaggle**.
+The entire pipeline is optimized to run on limited GPU environments such as **Google Colab**.
 
 ---
 
@@ -24,7 +24,6 @@ t5-text-summarization/
 │
 ├── train.py            # Fine-tuning script for T5
 ├── evaluate.py         # ROUGE evaluation script
-├── inference.py        # Run summarization on new input text
 ├── requirements.txt    # Project dependencies
 ├── README.md
 │
