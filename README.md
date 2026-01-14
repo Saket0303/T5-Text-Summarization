@@ -46,6 +46,7 @@ t5-text-summarization/
 - Loaded directly via Hugging Face:
 ```python
 load_dataset("cnn_dailymail", "3.0.0")
+```
 
 
 ## **Installation**
