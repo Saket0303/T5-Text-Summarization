@@ -19,6 +19,7 @@ The entire pipeline is optimized to run on limited GPU environments such as **Ka
 ---
 
 ## 📂 Project Structure
+```
 t5-text-summarization/
 │
 ├── train.py            # Fine-tuning script for T5
@@ -32,7 +33,7 @@ t5-text-summarization/
 │
 └── models/
     └── t5_finetuned/       # Saved fine-tuned model and tokenizer
-
+```
 
 
 ---
