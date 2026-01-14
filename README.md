@@ -21,12 +21,18 @@ The entire pipeline is optimized to run on limited GPU environments such as **Ka
 ## 📂 Project Structure
 t5-text-summarization/
 │
-├── train.py # Fine-tunes T5 on CNN/DailyMail dataset
-├── evaluate.py # Evaluates model using ROUGE metrics
-├── requirements.txt
+├── train.py            # Fine-tuning script for T5
+├── evaluate.py         # ROUGE evaluation script
+├── inference.py        # Run summarization on new input text
+├── requirements.txt    # Project dependencies
 ├── README.md
-└── notebooks/
-└── experiments.ipynb # Kaggle experimentation notebook
+│
+├── notebooks/
+│   └── experiments.ipynb   # Kaggle experimentation notebook
+│
+└── models/
+    └── t5_finetuned/       # Saved fine-tuned model and tokenizer
+
 
 
 ---
@@ -50,24 +56,27 @@ load_dataset("cnn_dailymail", "3.0.0")
 
 
 ## **Installation**
+```
 - pip install -r requirements.txt
+```
 or
+```
 - pip install transformers datasets evaluate rouge_score sentencepiece torch accelerate
-
+```
 ## Training
 - Load and preprocess the dataset
 - Fine-tune the T5 model
 - Save the trained model locally
 ```python
 python train.py
-
+```
 ## Evaluation (ROUGE Metrics)
 - ROUGE-1 → Unigram overlap
 - ROUGE-2 → Bigram overlap
 - ROUGE-L → Longest common subsequence
 ```python
 python evaluate.py
-
+```
 ## Memory Optimizations Used
 - Dynamic padding using DataCollatorForSeq2Seq
 - Small batch size with gradient accumulation
